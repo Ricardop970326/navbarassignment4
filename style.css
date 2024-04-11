@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d7ccccff;
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  position: center;
+  font-size: 18vw;
+
+
+}
+
+nav {
+  background-color: #000000;
+  color: #ccc7c7;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+nav .mainMenu {
+  display: flex;
+  list-style: none;
+}
+
+
+nav .mainMenu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ccc7c7;
+  font-size: 1.2rem;
+}
+
+
+nav .mainMenu li a.active,
+a:hover {
+  background: #1037f9;
+  color: #ffff;
+  padding: 15px;
+  border: none;
+  box-shadow: 0 5px 10px rgb(0, 0, 0, .35);
+  transition: ease-in-out .3s;
+}
+
+nav .openMenu {
+  font-size: 1.2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+nav.mainMenu,
+.closeMenu {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: clamp(50px, 8ww, 100px);
+}
+
+nav .logo {
+  margin: 6px;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+
+  nav .mainMenu {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #1d1b1b;
+    transition: top 1s ease;
+    display: none;
+  }
+
+  nav .mainMenu .closeMenu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  nav .openMenu {
+    display: block;
+  }
+
+  nav .mainMenu li a:hover {
+    background: #1037f9;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, .35);
+    transition: ease-in-out .2s;
+  }
+
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+}
